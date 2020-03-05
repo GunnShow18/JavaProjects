@@ -8,7 +8,7 @@ public class Student {
 	private String lastName;
 	private int gradeYear;
 	private String studentID;
-	private String courses = null;
+	private String courses = "";
 	private int tuitionBalance = 0;
 	private static int costOfCourse = 600;
 	private static int id = 1000;
@@ -49,7 +49,7 @@ public class Student {
 			Scanner scanner = new Scanner(System.in);
 			String course = scanner.nextLine();
 			if (!course.equals("Q")) {
-				this.courses += "\n" + course;
+				this.courses += "\n  " + course;
 				this.tuitionBalance += 600;
 			}
 			else {
@@ -73,7 +73,7 @@ public class Student {
 	}
 	
 	// Show status
-	public String showInfo() {
+	public String toString() {
 		return "Name: " + firstName + " " + lastName +
 				"\nGrade level: " + this.gradeYear +
 				"\nStudentID number: " + this.studentID +
